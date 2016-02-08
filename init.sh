@@ -5,5 +5,13 @@
 BASEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #   Link vim dotfiles
-ln -s "$BASEDIR/.vimrc" ~/.vimrc
-ln -s "$BASEDIR/.vim" ~/.vim
+rm ~/.vimrc
+cp -r "$BASEDIR/.vimrc" ~/.vimrc
+
+rm -rf ~/.vim
+cp -r "$BASEDIR/.vim" ~/.vim
+
+#   Fix terminator dotiles
+mkdir -p ~/.config/terminator
+rm ~/.config/terminator/config
+cp "$BASEDIR/.config/terminator/config" ~/.config/terminator/config
