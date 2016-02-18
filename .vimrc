@@ -16,6 +16,9 @@ endfunc
 "   Add mapping to toggle numbers
 " map <C-b> :call NumberToggle()<cr> 
 
+"   Force utf-8 encoding
+set encoding=utf-8
+
 "   Show existing tab with 4 spaces width
 set tabstop=4
 
@@ -39,14 +42,41 @@ autocmd InsertLeave * :set relativenumber
 execute pathogen#infect()
 
 "   Set the color scheme
+set t_Co=256
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 "   Set additional solarized options 
 let g:solarized_termtrans=1
 let g:solarized_termcolor=256
 
+"
+"   Below lines are for NERDTree plugin
+"
+
 "   Map NERDTree extension to use 
 map <C-m> :NERDTreeToggle<CR>
 
+"   
+"   Below lines are for vim-airline plugin
+"
+
+"   Below supposedly fixes something with fonts.
+if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+  endif
+let g:airline_symbols.space = "\ua0"
+
+"   Don't show default status line
+set noshowmode
+
+"   Manually set the theme cause sometimes it's going quite crazy
+let g:airline_theme='solarized'
+
+"   Set airline to appear all the time
+set laststatus=2
+
+"   Set nice looking symbols for airline plugin. Note that powerline patched
+"   fonts will be required for this setting.
+let g:airline_powerline_fonts=1
