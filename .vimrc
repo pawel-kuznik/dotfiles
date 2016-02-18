@@ -14,7 +14,7 @@ function! NumberToggle()
 endfunc
 
 "   Add mapping to toggle numbers
-map <C-n> :call NumberToggle()<cr> 
+" map <C-b> :call NumberToggle()<cr> 
 
 "   Show existing tab with 4 spaces width
 set tabstop=4
