@@ -28,6 +28,9 @@ set shiftwidth=4
 "   On pressing tab, insert 4 spaces
 set expandtab
 
+"   I am a coder. I don't need my lines to be wrapped.
+set nowrap
+
 "   Initially we want to have hybrid numbers
 set number
 set relativenumber
