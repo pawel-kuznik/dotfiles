@@ -48,7 +48,7 @@ execute pathogen#infect()
 set t_Co=256
 syntax enable
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 "   Set additional solarized options 
 let g:solarized_termtrans=1
