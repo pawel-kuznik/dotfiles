@@ -41,6 +41,9 @@ set relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
+"   The 'vim! go sudo!' trick
+cmap w!! w !sudo tee > /dev/null %
+
 "   Start infecting
 execute pathogen#infect()
 
