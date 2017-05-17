@@ -11,6 +11,10 @@ cp -r "$BASEDIR/.vimrc" ~/.vimrc
 rm -rf ~/.vim
 cp -r "$BASEDIR/.vim" ~/.vim
 
+#   Link tmux dotfiles
+rm ~/.tmux.conf
+cp -r "$BASEDIR/.tmux.conf" ~/.tmux.conf
+
 #   Fix terminator dotiles
 mkdir -p ~/.config/terminator
 rm ~/.config/terminator/config
